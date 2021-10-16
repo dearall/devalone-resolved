@@ -4,5 +4,25 @@
 #
 # @example
 #   include resolved
-class resolved {
+class resolved (
+  $dns,
+  $dns_stub_listener
+) {
+    file { '/etc/systemd/resolved.conf':
+    ensure  => file,
+    content => template('dnsclient/resolved.conf.erb'),
+    notify  => Service['systemd-resolved'],
+    backup  => true,
+  }
+
+  service { 'systemd-resolved':
+    ensure    => running,
+    enable    => true,
+    subscribe => File['/etc/systemd/resolved.conf'],
+  }
+
+  file { '/etc/resolv.conf':
+    ensure => link,
+    target => '/run/systemd/resolve/resolv.conf',
+  }
 }
