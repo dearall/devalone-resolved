@@ -81,7 +81,7 @@
 #
 #   Default value: 'no'.
 #
-# @param 
+# @param cache
 #   Takes a boolean or "no-negative" as argument. If "yes", resolving a domain name which already got queried earlier will return the
 #   previous result as long as it is still valid, and thus does not result in a new network request. Be aware that turning off caching
 #   comes at a performance penalty, which is particularly high when DNSSEC is used.
