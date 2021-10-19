@@ -99,3 +99,4 @@ For an extensive list of supported operating systems, see metadata.json
 ## Release Notes
 
 2021-10-18, version 1.0.0 released.
+2021-10-19, version 1.1.0 released.
