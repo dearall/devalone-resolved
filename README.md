@@ -84,7 +84,7 @@ class { 'resolved':
 
 ## Reference
 
-See [REFERENCE.md](https://github.com/dearall/devalone-resolved/blob/main/REFERENCE.md)
+See [REFERENCE.md](https://github.com/dearall/devalone-resolved/blob/master/REFERENCE.md)
 
 ## Limitations
 
